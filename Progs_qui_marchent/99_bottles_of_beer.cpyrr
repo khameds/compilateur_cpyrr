@@ -1,0 +1,30 @@
+/**************************************
+ *         99 bottles of beer         *
+ *====================================*
+ * pour en savoir plus,               *
+ * http://www.99-bottles-of-beer.net/ *
+ **************************************/
+prog
+
+var nb:int;
+
+procedure uneBouteille (nb:int)
+var nbMoinsUn:int;
+begin
+    nbMoinsUn := nb - 1;
+    write("%d bottles of beer on the wall, %d bottles of beer.\nTake one down and pass it around, %d bottles of beer on the wall.\n\n", nb, nb, nbMoinsUn);
+end
+
+procedure derniereBouteille ()
+begin
+    write("1 bottle of beer on the wall, 1 bottle of beer.\nTake one down and pass it around, no more bottles of beer on the wall.\n\nNo more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.\n");
+end
+
+begin
+    nb := 99;
+    while (nb > 1) do{
+	call uneBouteille(nb);
+	nb--;
+    }
+    call derniereBouteille();
+end

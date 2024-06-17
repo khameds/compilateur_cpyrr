@@ -1,0 +1,41 @@
+prog
+
+    type liste:tab[0..255]:int;
+    var l:liste;
+    var max2:int;
+
+    function sec_plus_grand:int ()
+	type max:struct
+	    max1:int,
+	    max2:int
+	struct_end;
+	var max:max;
+	var i:int;
+	
+	begin
+	    if (l[0] > l[1]) then{
+		max.max1 := l[0];
+		max.max2 := l[1];
+	    }
+	    else{
+		max.max1 := l[1];
+		max.max2 := l[2];
+	    }
+	    for (i:=2; i<256; i++){
+		if (l[i] >= max.max1) then{
+		    max.max2 := max.max1;
+		    max.max1 := l[i];
+		}
+		elif (l[i] >= max.max2) then{
+		    max.max2 := l[i];
+		}
+	    }
+	    return(max.max2);
+	end
+
+begin
+    // On considère que la liste est initialisée
+    max2 := call sec_plus_grand();
+    write("Le second plus grand élément de l est %d\n", max2);
+    return();
+end

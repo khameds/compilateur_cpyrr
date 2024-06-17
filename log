@@ -1,0 +1,39 @@
+In file included from INC/hash.h:4:0,
+                 from SRC/main.c:4:
+INC/declare.h:16:27: erreur: unknown type name ‘lexeme’
+ decVar newDec(int nature, lexeme name, int reg, void * descr, int exec);
+                           ^
+In file included from SRC/main.c:4:0:
+INC/hash.h:11:5: erreur: unknown type name ‘decType’
+     decType type;      // type(s) portant ce nom
+     ^
+SRC/main.c: In function ‘main’:
+SRC/main.c:25:2: attention : ‘gets’ is deprecated (declared at /usr/include/stdio.h:638) [-Wdeprecated-declarations]
+  gets(input);
+  ^
+SRC/main.c:27:6: attention : implicit declaration of function ‘parseString’ [-Wimplicit-function-declaration]
+      wordTab = parseString(input);
+      ^
+SRC/main.c:27:14: attention : assignment makes pointer from integer without a cast [enabled by default]
+      wordTab = parseString(input);
+              ^
+SRC/main.c:35:3: attention : implicit declaration of function ‘help’ [-Wimplicit-function-declaration]
+   help();
+   ^
+SRC/main.c:50:3: attention : implicit declaration of function ‘newDec’ [-Wimplicit-function-declaration]
+   d = newDec(nat, l, 0, NULL, 0);
+   ^
+SRC/main.c:50:5: attention : assignment makes pointer from integer without a cast [enabled by default]
+   d = newDec(nat, l, 0, NULL, 0);
+     ^
+SRC/main.c:13:9: attention : unused variable ‘place’ [-Wunused-variable]
+     int place = 0;
+         ^
+SRC/main.c: Hors de toute fonction :
+SRC/main.c:60:6: attention : conflicting types for ‘help’ [enabled by default]
+ void help(){
+      ^
+SRC/main.c:35:3: note: previous implicit declaration of ‘help’ was here
+   help();
+   ^
+make: *** [OBJ/main.o] Erreur 1

@@ -1,0 +1,27 @@
+prog
+var res:int;
+var sugg:int;
+var cont:bool;
+var num:int;
+
+begin
+    num := 1;
+    cont := true;
+    res := call rand(100); // On suppose que rand() est une fonction native de ce langage
+
+    while (cont) do{
+	read(sugg);
+	if (sugg > res) then{
+	    write("C'est moins\n");
+	    num ++;
+	}
+	elif (sugg < res) then{
+	    write("C'est plus\n");
+	    num ++;
+	}
+	else{
+	    write("Bravo ! Vous avez trouvé le nombre mystère en %d étapes\n");
+	    cont := false;
+	}
+    }
+end

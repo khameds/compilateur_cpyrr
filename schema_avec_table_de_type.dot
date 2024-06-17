@@ -1,0 +1,27 @@
+digraph declare {
+    hashTab [shape=record, label="{ 1 | <2> 2 | ... | HASHTAB_SIZE - 1}"]
+
+    lex1 [shape=Mrecord, label="\"premier IDF\" | <dec> declaration | <next> next"]
+    lex2 [shape=Mrecord, label="\"second IDF\" | <dec> declaration | <next> next"]
+    lexNULL [shape=Mrecord, label="NULL"]
+
+    dec1 [shape=Mrecord, label="variable | region | <desc> description | <exec> exécution | <next> next"]
+    dec2 [shape=Mrecord, label="tableau | region | <desc> description | <exec> exécution | <next> next"]
+    dec3 [shape=Mrecord, label="fonction | region | <desc> description | <exec> exécution | <next> next"]
+    decNULL [shape=Mrecord, label="NULL"]
+
+    type [shape=record, label="42 | 7 | 1024 | 94 | 1337 | <tab> 3 | <tabType> 1 | 1 | 4 | 1 | 6 | 1 | 5"]
+
+
+    hashTab:2 -> lex1
+    lex1:next -> lex2
+    lex2:next -> lexNULL
+    
+    lex1:dec -> dec1
+
+    dec1:next -> dec2
+    dec2:next -> dec3
+    dec3:next -> decNULL
+
+    dec2:desc -> type:tab
+}

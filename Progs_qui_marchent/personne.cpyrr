@@ -1,0 +1,53 @@
+prog
+
+    type notes:tab[0..10]:int;
+
+    type etudiant:struct
+	nom:string[64],
+	premom:string[64],
+	anneeDeNaissance:int,
+	notes:notes
+    struct_end;
+
+    type groupe:tab[0..63]:etudiant;
+
+    type classe:struct
+	nom:string[64],
+	classe:groupe
+    struct_end;
+
+    var l3_info:classe;
+    var cont:bool;
+    var choix:char;
+    var i:int;
+    var j:int;
+    var moy:int;
+
+begin
+    cont := true;
+    for (i:=0; cont && i < 64; i++){
+	write("Etudiant %s %s, ne en %d\n", l3_info[i].nom, l3_info[i].prenom, l3_info[i].anneeDeNaissance);
+	/* Calcul de la moyenne */
+	moy := 0;
+	nb_notes := 0;
+	for (j:=0; j<=10; j+=1){
+	    j += l3_info[i].note[j];
+	    if (note != 0) then{// Si la note est définie
+		nb_notes++;
+	    }
+	}
+	moy /= nb_notes;
+	if (nb_note == 0) then{
+	    write("Pas de données\n");
+	}
+	else{
+	    write("Moyenne de %d\n", moy);
+	}
+	/* Choix d'action */
+	write("Etudiant suivant ?[y/n]\n");
+	read(choix);
+	if (choix != 'y') then{
+	    cont := false;
+	}
+    }
+end

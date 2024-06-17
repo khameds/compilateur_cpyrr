@@ -1,0 +1,46 @@
+prog
+/* DECLARATIONS GLOBALES */
+var a:int;
+var b:int;
+var c:int;
+var delta:float;
+type res:tab[1..2]:float;
+var result:res;
+
+var erreur:float;
+
+function delta:float (a:int, b:int, c:int)
+begin
+    return(b * b - 4 * a * c);
+end
+
+function zero:bool (a:int)
+begin
+    return(a == 0);
+end
+
+function racines:res (delta:float, a:int, b:int, c:int)
+var result:res;
+begin
+    erreur := -1;
+    if (delta > 0) then{
+	res[1] := (-b - call sqrt(delta) / (2 * a));
+	res[2] := (-b + call sqrt(delta) / (2 * a));
+    }
+    elif (call zero(delta)) then{
+	res[1] := (-b / (2 * a));
+	res[2] := erreur;
+    }
+    else{
+	res[1] := erreur;
+	res[2] := erreur;
+    }
+    return(res);
+end
+
+
+begin
+    delta := call delta(a,b,c);
+    res := call racines(delta,a,b,c);
+    write("%d %d", res[1], res[2]);
+end

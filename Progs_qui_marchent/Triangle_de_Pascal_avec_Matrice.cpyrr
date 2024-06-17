@@ -1,0 +1,67 @@
+prog
+
+    /* Ce programme est l'occasion de
+     * tester une nouvelle indentation
+     * afin que la structure du programme
+     * soit plus claire */
+    
+    /* Cette version présnete aussi la particularité
+     * d'être implémentée à l'aide d'un tableau de 
+     * tableaux, et non d'un simple tableau à 2 dimensions */
+
+    procedure pascal (taille:int)
+
+	/* DECLARATIONS DE VARIABLES */
+	type ligne:tab[0..taille]:int; // Une ligne du tableau 
+	type pascal:tab[0..taille]:ligne; // tableau à 2 dimensions de taille x taille
+	var pascal:pascal; // variable pascal, de type pascal... Le tout dans une fonction nommée pascal... Si c'est pas de la surcharge, ça !
+	var i:int;
+	var j:int;
+	var taille:int;
+
+	/* DECLARATIONS DE FONCTIONS/PROCEDURES */
+	function init:pascal (taille:int) // Une procédure déclarée... dans une procédure !
+	    var pascal:pascal;
+	begin
+	    i := 0;
+	    for (i:=0; i<= taille; i++){
+		for (j:=0; j <= taille; j++){
+		    pascal[i][j] := 0;
+		}
+	    }
+	    pascal[1][1] := 1;
+	    pascal[1][2] := 1;
+	    /* Tableau initialisé avec succès */
+	    return(pascal);
+	end
+
+    /* MAIN DE PASCAL */
+    begin
+	pascal := call init(taille);
+	i := 1;
+	while (i <= taille) do{
+	    j := 1;
+	    while (j <= i) do{
+		pascal [i][j] := pascal[i-1][j-1] + pascal[i-1][j];
+		j+=1;
+	    }
+	    i+=1;
+	}
+	// Le tableau contient maintenant le triangle de pascal, reste à l'afficher
+	for (i:=1; i<taille; i++){
+	    write("%d - ", i);
+	    for (j:=1; j<=i; j++){
+		write("%d\t", pascal[i,j]);
+	    }
+	    write("\n");
+	}
+    end
+
+
+/* MAIN DU PROG */
+begin
+    write("Entrez le nombre de lignes du triangle de Pascal que vous voulez voir : ");
+    read(taille);
+    write("Humm, ça serait quand même plus simple de récupérer argv[1]... A creuser...\n");
+    call pascal(taille);
+end

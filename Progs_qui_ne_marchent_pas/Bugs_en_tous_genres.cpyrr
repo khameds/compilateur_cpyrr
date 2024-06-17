@@ -1,0 +1,36 @@
+prog 
+
+var smile:int;
+var zac:char;
+var missFortune:string[15];
+var FiZz:/*poissooooooooonnnnnnn*/float;
+
+type orianna:tab[5 .. call ziggs(boom) || choGath && zed > garen ]:int;		/* Deuxième indice précisé pour le tableau complétement incompréhensible, nécessité de placer des parenthèses */
+
+type J4RVAN7h31337:struct
+	taric:int,
+	sona:string						/* Pas de nombre spécifié après le string pour la taille de la chaine */
+struct_end;
+
+procedure swain (master, tacticien)		/* Pas de types spécifiés pour les variables passées en arguments */ 
+	begin
+		return;			/* Ajouter les parenthèses après le return avant le point-virgule */
+		return fizz;
+		return "5";
+		return 5;
+		return noxus(zhonya);		/* Pas d'argument dans le return */
+	end
+	
+begin
+	J4RVAN7h31337.taric:=9;
+	J4RVAN7h31337.sona:="trinity";
+	orianna[2]:= 77;
+	
+	while ( 5 || orianna[5] < zac && smile) do 
+		begin
+			write("welcome to the league of draven !!");
+			write("buy : %s", J4RVAN7h31337.sona);
+		end	
+end
+
+/*  || choGath && zed > garen */

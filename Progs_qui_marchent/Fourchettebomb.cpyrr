@@ -1,0 +1,19 @@
+/* attention ne faites pas ça chez vous !*/
+prog
+
+procedure fourchette()
+	begin
+		while ( true ) do
+			begin
+				call fourchette();
+			end
+	end
+
+begin 
+
+	while ( 5 > 2 ) do
+	begin
+		call fourchette();
+	end
+
+end

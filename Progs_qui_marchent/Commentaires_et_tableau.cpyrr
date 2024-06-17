@@ -1,0 +1,29 @@
+prog
+
+type tableaubool:tab[0..1]:bool;
+var character:int;
+var ormagoden:string/**/[10];
+var brutal:bool;/*****/
+
+procedure legend (ormagoden:string[10], brutal:bool)
+// Legend of the light.
+/**/bigbang
+	if(brutal) then
+/*bigbang*/	begin
+			write ("%s", ormagoden);
+		end
+	else
+		begin
+			write ("Noob !");
+		end
+/*begin end*/	
+while(1 == -1) do
+	bigbang
+		tableaubool[0] := true;
+	end
+character := 42;
+apocalypse
+
+begin
+	call legend(ormagoden, brutal);
+apocalypse

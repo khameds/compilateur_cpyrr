@@ -1,0 +1,41 @@
+prog
+/* CALCULE LES NOMBRES PREMIERS INFERIEURS A UN NOMBRE DONNE *
+ * ET LES AFFICHE */
+var max:int;
+type premier:tab[1..1048576]:int;
+var premier:premier;
+var pos:int;
+var i:int;
+
+function premier:bool (num:int, pos:int) // Teste si un nombre est premier en fonction des nombres premiers précédents
+var i:int;
+{
+    i := 1;
+    while (i<pos) do {
+	if (num % premier[i] == 0) then {
+	    return(false);
+	}
+	i++;
+    }
+    return(true);
+}
+
+begin
+
+    i := 2; // Un nombre premier est toujours supérieur ou égal à 2
+    max := 0;
+    pos := 1;
+    while (max < 2) do {
+	read(max);
+    }
+    while (i<max) do {
+	if (call premier(i,pos)) then {
+	    premier[pos++] := i;
+	}
+    }
+    i := 0;
+    while (i<pos) do {
+	write("%d\n", premier[i]);
+	i++;
+    }
+end

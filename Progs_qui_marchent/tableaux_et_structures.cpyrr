@@ -1,0 +1,14 @@
+prog
+type tinyTab:tab[1..100]:int;
+type bigTab:tab[1..100]:tinyTab;
+type listeTab:struct
+    premierTab:bigTab,
+    secondTab:bigTab
+struct_end;
+type tabDeListes:tab[1..100]:listeTab;
+
+var tableau:tabDeListes;
+
+begin
+    tableau[30].premierTab[7][42] := 15;
+end

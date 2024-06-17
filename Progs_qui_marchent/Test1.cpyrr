@@ -1,0 +1,14 @@
+prog
+var i:int;
+var j:int;
+begin
+    i:= i+1;
+    i++;
+    ++i;
+    j := ++i;
+    k := i++;
+    a := 'a';
+    if (a == 'a') then{
+	return('a');
+    }
+end

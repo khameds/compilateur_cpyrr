@@ -1,0 +1,21 @@
+prog
+
+type structuredebool:struct
+	vrai:bool,
+	faux:bool
+struct_end;
+
+var boolean:bool;
+
+bigbang
+
+if(boolean) then
+	begin
+		write("%s", structuredebool.vrai);
+	end
+else
+	begin
+		write("%s", structuredebool.faux);
+	end
+	
+apocalypse

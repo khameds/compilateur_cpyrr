@@ -1,0 +1,28 @@
+prog
+var compteur:int;
+function moinsUn:int (i:int)
+var a:int;
+begin
+    a := i - 1;
+    return (a);
+end
+function sup0:bool (i:int)
+begin
+    if (i < 0) then
+	begin
+	    return (true);
+	end
+    else
+	begin
+	    return (false);
+	end
+end
+
+begin
+    while (call sup0(compteur)) do
+    begin
+	compteur := call moinsUn(compteur);
+	write("Compteur à %d\n", compteur);
+    end
+    write("Le compte à rebours est terminé\n");
+end

@@ -1,0 +1,16 @@
+/* ce programme ne marchera pas */
+prog
+
+
+type truc_mal_fait : struct
+	entier:int;								/* Point-virgule ici qui bloque le reste */
+	function func:int ( j:char)		/* Fonction impossible à utiliser dans un struct */
+		begin
+		return coucou;
+		end
+struct_end;
+
+begin
+	return "aurevoir";
+end
+

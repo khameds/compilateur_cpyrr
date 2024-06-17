@@ -1,0 +1,12 @@
+prog
+var i:int;
+var a:int;
+var s:string[256];
+begin
+    while (a > 0) do
+    begin
+	s := "Hello World";
+	i := (a - 5);
+	a--;
+    end
+end 

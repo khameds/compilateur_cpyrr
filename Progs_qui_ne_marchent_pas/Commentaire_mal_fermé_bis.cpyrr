@@ -1,0 +1,8 @@
+prog
+
+var i:int;
+/* OOoooooOOO, prog qui marche pas !!! /
+
+bigbang
+	write("Ah ben non ca marche... Ôo");
+apocalypse

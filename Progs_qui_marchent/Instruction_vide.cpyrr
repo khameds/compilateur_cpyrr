@@ -1,0 +1,15 @@
+prog
+/* Instruction vide acceptée ? */
+var i:int;
+var n:int;
+
+bigbang
+	n:=5;
+	i:=0;
+	while(i<5) do
+		begin
+			;
+			i++;
+		end
+	
+apocalypse

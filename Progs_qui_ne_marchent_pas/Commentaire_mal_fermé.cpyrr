@@ -1,0 +1,23 @@
+prog
+
+/* Ne marchera pas, commentaire mal fermé, placera une erreur au niveau de begin, vu qu'il continuera le commentaire commencé à la ligne 15 */
+
+var c:char;
+var chainenawak:string[10];
+var entiernawak:int;
+var i:int;
+
+procedure small ( chainenawak:string[10] )
+begin
+	while ( entiernawak < i ) do /**/
+		begin /*********  ***/
+			write("%c", c); /* Testnawak */
+			entiernawak++;	/* ***Ano**ther **te**st /
+		end
+	/* Test ! */
+end
+
+
+begin
+	call small(chainenawak);
+end

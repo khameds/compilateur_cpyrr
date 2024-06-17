@@ -1,0 +1,21 @@
+prog
+var nbre_d_anneaux_a_deplacer:int;
+
+procedure hanoi (depart:int, arrivee:int, temp:int, num:int)
+begin
+    if (num == 1) then{
+	write("On déplace l'anneau de la tour %d à la tour %d\n", depart, arrivee);
+    }
+    else{
+	call hanoi(depart, temp, arrivee, num - 1);
+	call hanoi(depart, arrivee, temp, 1);
+	call hanoi(temp, arrivee, depart, num - 1); 
+    }
+}
+
+begin
+    write("Combien d'anneaux sur la première tour ?\n");
+    read(nbre_d_anneaux_a_deplacer);
+    call hanoi(1, 2, 3, nbre_d_anneaux_a_deplacer);
+    write("Les %d anneaux ont été déplacés\n", nbre_d_anneaux_a_deplacer);
+end

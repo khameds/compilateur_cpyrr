@@ -1,0 +1,9 @@
+prog
+var i:int;
+var j:int;
+
+begin
+    for (i>4; i:=4; i++){
+	write("Cette boucle ne doit pas marcher");
+    }
+end

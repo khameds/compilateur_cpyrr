@@ -1,0 +1,28 @@
+prog
+var compteur:int;
+function plusUn:int (i:int)
+var a:int;
+begin
+    a := i + 1;
+    return (a);
+end
+function sup0:bool (i:int)
+begin
+    if (i < 0) then
+	begin
+	    return (true);
+	end
+    else
+	begin
+	    return (false);
+	end
+end
+
+begin
+    while (call sup0(compteur)) do
+    begin
+	compteur := call plusUn(compteur);
+	write("Compteur à %d\n", compteur);
+    end
+    write("Ce texte ne doit jamais s'afficher...\n");
+end

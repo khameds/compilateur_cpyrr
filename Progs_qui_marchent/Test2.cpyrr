@@ -1,0 +1,5 @@
+prog
+begin
+    i ++;
+    // Ceci est un des programmes les plus courts qu'on puisse faire
+end

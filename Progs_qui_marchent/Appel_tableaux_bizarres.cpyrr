@@ -1,0 +1,19 @@
+prog 
+
+var koala:int;
+type tab1:tab[call fun( koala)..5%1]:char;
+type tab2:tab[1..4,lol..lol,1..4,0..0]:tab1;
+
+type strv : struct
+	koalaaaa:string[1024],
+	kebbab:tab2
+struct_end;
+	
+function jojo:char ( a:int )
+	begin
+		return "c";
+	end	
+
+begin
+call jojo (koala);
+end

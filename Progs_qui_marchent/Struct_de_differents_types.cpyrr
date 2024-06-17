@@ -1,0 +1,16 @@
+prog
+
+type teststruct:struct
+	a:int,
+	b:char,
+	c:string[10],
+	d:bool
+struct_end;
+
+begin
+	teststruct.a := 42;
+	teststruct.b := 'a';
+	teststruct.c := "chaine";
+	teststruct.d := true;
+	write("%d, %c, %s, %s", teststruct.a, teststruct.b, teststruct.c, teststruct.d);
+end

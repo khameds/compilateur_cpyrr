@@ -1,0 +1,33 @@
+prog
+    type liste:tab[0..63]:string[64];
+
+    var l1:liste;
+    var l2:liste;
+    var produit:liste;
+    var i:int;
+    var tailleDel1:int;
+    
+
+    function concat:liste (l1:list, l2:list)
+    begin
+	for (i:=0; l1[i] != '\0'; i++){
+	    if (i == 64) then {
+		write("Erreur : accès a une case non définie\n");
+		exit(-1);
+	    }
+	}
+	tailleDel1 := i;
+	for (i:=0; l2[i]; i++){
+	    if (i == 64) then {
+		write("Erreur : index supérieur à la taille du tableau\n");
+		exit(-1);
+	    }
+	    l1[i + tailleDel1]=l2[i];
+	}
+	return(l1);
+    end
+
+begin
+    /* On considère l1 et l2 définis ici */
+    produit := call concat(l1,l2);
+end

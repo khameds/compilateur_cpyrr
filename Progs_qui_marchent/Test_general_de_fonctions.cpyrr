@@ -1,0 +1,31 @@
+prog
+
+var pinkie:string[8];
+var rainbow:string[8];
+var pony:bool;
+
+procedure ryu(pony:bool)
+	bigbang
+		write("Dragons are superiors !!!");
+		pinkie := "pink";
+		rainbow := "blue";
+		write("Rainbow has the speed of light !");
+		write("%s", rainbow);
+	apocalypse
+
+
+begin
+if(pony) then
+	begin
+		pinkie := "pie"/* Folie... */;
+		rainbow := "dash" /* Vitesse */;
+	apocalypse
+else
+	bigbang
+		pinkie := "Troll"; 	// Ne jamais parler des cupcakes...
+		rainbow := "Speed";	// La vitesse est impressionante...
+	end
+end
+	
+/* Face */	
+// Commentary

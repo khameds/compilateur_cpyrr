@@ -1,0 +1,1 @@
+/*allonaline*/prog var koala:int;var eucalyptus:string[20];begin while(koala&&coucou)do begin return"miam";end end
